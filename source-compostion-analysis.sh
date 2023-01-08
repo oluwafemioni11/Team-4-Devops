@@ -19,11 +19,11 @@ fi
 docker pull owasp/dependency-check:$DC_VERSION
 
 docker run --rm \
-    -e user=$USER \
-    -u $(id -u ${USER}):$(id -g ${USER}) \
-    --volume $(pwd):/src:z \
+    -e user="$USER" \
+    -u "$(id -u "${USER}"):$(id -g "${USER}")"" \
+    --volume "$(pwd):/src:z" \
     --volume "$DATA_DIRECTORY":/usr/share/dependency-check/data:z \
-    --volume $(pwd)/odc-reports:/report:z \
+    --volume "$(pwd)/odc-reports:/report:z" \
     owasp/dependency-check:$DC_VERSION \
     --scan /src \
     --format "ALL" \
