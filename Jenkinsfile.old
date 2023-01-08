@@ -16,7 +16,7 @@ pipeline {
     stage ('Source Composition Analysis') {
       steps {
          sh 'rm owasp* || true'
-         sh 'wget "https://github.com/oluwafemioni11/Team-4-Devops/blob/8d60daa3e5e33831575d80cb907b227c533bf7e7/source-compostion-analysis.sh" '
+         sh 'wget "https://github.com/oluwafemioni11/Team-4-Devops/blob/master/source-compostion-analysis.sh" '
          sh 'chmod +x source-composition-analysis.sh'
          sh 'bash source-composition-analysis.sh'
          sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
