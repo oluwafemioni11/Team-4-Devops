@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DC_VERSION="latest"
 DC_DIRECTORY=$HOME/OWASP-Dependency-Check
