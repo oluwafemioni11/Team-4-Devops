@@ -13,12 +13,8 @@ pipeline {
       }
     }
     
-    stage ('Software Composition Analysis') {
-      steps {
-         dependencyCheck additionalArguments: '--format HTML', odcInstallation: 'Team 4 Devops Dependency Check'
          
-         }
-    }
+       
     
     
     stage ('SAST') {
